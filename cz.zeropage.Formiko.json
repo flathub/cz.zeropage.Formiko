@@ -31,24 +31,26 @@
     "modules": [
         {
             "name": "gtksourceview",
-            "config-opts": [ "--disable-Werror" ],
+            "config-opts": [
+                "--disable-Werror"
+            ],
             "sources": [
-            {
-                "type": "archive",
-                "url": "https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz",
-                "sha256": "691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd"
-            }
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz",
+                    "sha256": "691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd"
+                }
             ]
         },
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "gtkspell",
             "sources": [
-            {
-                "type": "archive",
-                "url": "https://downloads.sourceforge.net/gtkspell/gtkspell3-3.0.10.tar.xz",
-                "sha256": "b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732"
-            }
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/gtkspell/gtkspell3-3.0.10.tar.xz",
+                    "sha256": "b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732"
+                }
             ]
         },
         "python3-modules.json",
@@ -59,17 +61,17 @@
                 "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} formiko"
             ],
             "sources": [
-            {
-                "type": "file",
-                "url": "https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl",
-                "sha256": "6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0"
-            },
-            {
-                "type": "file",
-                "url": "https://files.pythonhosted.org/packages/ff/c7/6bfbbdbc3cf8ea641536ba6100611d0413c7aa614d241e3e3ffbd26e4a1c/formiko-1.4.3-py3-none-any.whl",
-                "sha256": "1a76867776b59d8469309ed1fa0addfd9e50dde4c92218382b8a7825d5a753a2"
-            }
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl",
+                    "sha256": "6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ff/c7/6bfbbdbc3cf8ea641536ba6100611d0413c7aa614d241e3e3ffbd26e4a1c/formiko-1.4.3-py3-none-any.whl",
+                    "sha256": "1a76867776b59d8469309ed1fa0addfd9e50dde4c92218382b8a7825d5a753a2"
+                }
             ]
         }
-        ]
+    ]
 }
