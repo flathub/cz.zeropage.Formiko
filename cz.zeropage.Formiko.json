@@ -58,18 +58,14 @@
             "name": "formiko",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} formiko"
+                "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/ --optimize=1"
             ],
             "sources": [
                 {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl",
-                    "sha256": "6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ff/c7/6bfbbdbc3cf8ea641536ba6100611d0413c7aa614d241e3e3ffbd26e4a1c/formiko-1.4.3-py3-none-any.whl",
-                    "sha256": "1a76867776b59d8469309ed1fa0addfd9e50dde4c92218382b8a7825d5a753a2"
+                    "type": "git",
+                    "url": "https://github.com/ondratu/formiko.git",
+                    "tag": "1.4.3",
+                    "commit": "961bbc0e8795b76a6d80ae5cb4f0bf55b46caed6"
                 }
             ]
         }
