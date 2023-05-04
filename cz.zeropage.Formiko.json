@@ -69,6 +69,10 @@
                     "url": "https://github.com/ondratu/formiko.git",
                     "tag": "1.4.3",
                     "commit": "961bbc0e8795b76a6d80ae5cb4f0bf55b46caed6"
+                },
+                {
+                    "type": "patch",
+                    "path": "Allow-webkitgtk-4.1.patch"
                 }
             ]
         }

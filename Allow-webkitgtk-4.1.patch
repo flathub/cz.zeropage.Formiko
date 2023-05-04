@@ -1,0 +1,27 @@
+From 1b3449e542b6ddaf78d4d7010fee734bcb7e95c1 Mon Sep 17 00:00:00 2001
+From: Jeremy Bicha <jeremy.bicha@canonical.com>
+Date: Mon, 29 Aug 2022 13:44:13 -0400
+Subject: [PATCH] Allow webkitgtk 4.1
+
+webkitgtk 4.1 is the same as 4.0 except that it uses libsoup3
+instead of libsoup2.4
+---
+ formiko/renderer.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/formiko/renderer.py b/formiko/renderer.py
+index 9029a5e..c5073b6 100644
+--- a/formiko/renderer.py
++++ b/formiko/renderer.py
+@@ -2,7 +2,10 @@
+ from gi import require_version
+ from os.path import abspath, dirname, splitext, exists
+
+-require_version('WebKit2', '4.0')   # noqa
++try:
++    require_version('WebKit2', '4.1')   # noqa
++except ValueError:
++    require_version('WebKit2', '4.0')   # noqa
+
+ from gi.repository.WebKit2 import WebView, PrintOperation, FindOptions
+ from gi.repository.GLib import idle_add, Bytes, get_home_dir, \
