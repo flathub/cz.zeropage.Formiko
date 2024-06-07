@@ -73,6 +73,10 @@
                 {
                     "type": "patch",
                     "path": "Allow-webkitgtk-4.1.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix_appdata.patch"
                 }
             ]
         }
