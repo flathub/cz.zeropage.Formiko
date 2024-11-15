@@ -1,0 +1,47 @@
+diff --git a/formiko.metainfo.xml b/formiko.metainfo.xml
+index 1e91b6a..bb28c14 100644
+--- a/formiko.metainfo.xml
++++ b/formiko.metainfo.xml
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
++<!-- Copyright 2024 Ondřej Tůma -->
+ <component type="desktop-application">
+     <id>cz.zeropage.Formiko</id>
+     <name>Formiko</name>
+-    <summary>reStructuredText and MarkDown editor and live previewer</summary>
+-    <!-- Copyright 2018 Ondřej Tůma -->
++    <summary>reStructuredText and MarkDown editor</summary>
+     <provides>
+         <mediatype>text/plain</mediatype>
+         <mediatype>text/html</mediatype>
+@@ -14,6 +14,9 @@
+     </provides>
+     <content_rating type="oars-1.1"/>
+     <releases>
++        <release version="1.5.0" type="stable" date="2024-11-14">
++            <url>https://github.com/ondratu/formiko/releases/tag/1.5.0</url>
++        </release>
+         <release version="1.4.3" type="stable" date="2019-12-10">
+             <url>https://github.com/ondratu/formiko/releases/tag/1.4.3</url>
+         </release>
+@@ -47,11 +50,15 @@
+         </ul>
+     </description>
+     <screenshots>
+-        <screenshot type="default" width="1024" height="647">
+-            <image>https://raw.githubusercontent.com/ondratu/formiko/master/screenshot_1024.png</image>
+-        </screenshot>
+-        </screenshots>
+-    <developer_name>Ondřej Tůma</developer_name>
++      <screenshot type="default" width="1024" height="647">
++        <caption>The Formiko main window with editore and preview.</caption>
++        <image>https://raw.githubusercontent.com/ondratu/formiko/master/screenshot_1024.png</image>
++      </screenshot>
++    </screenshots>
++    <branding>
++      <color type="primary" scheme_preference="light">#ebebeb</color>
++      <color type="primary" scheme_preference="dark">#828282</color>
++    </branding>
+     <developer id="cz.zeropage">
+       <name>Ondřej Tůma</name>
+     </developer>
