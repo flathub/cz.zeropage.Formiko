@@ -1,0 +1,53 @@
+app-id: cz.zeropage.Formiko
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+command: formiko
+rename-icon: formiko
+rename-desktop-file: formiko.desktop
+rename-appdata-file: formiko.metainfo.xml
+finish-args:
+  - --share=ipc
+  - --device=dri
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --share=network
+  - --filesystem=home
+  - --filesystem=/media
+  - --filesystem=xdg-run/gvfs
+  - --filesystem=xdg-run/gvfsd
+  - --talk-name=org.gtk.vfs.*
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/pkgconfig
+  - /share/aclocal
+  - /man
+  - /share/man
+  - /share/gtk-doc
+  - /share/vala
+  - '*.la'
+  - '*.a'
+modules:
+  - name: gtksourceview
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz
+        sha256: 7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d
+  - shared-modules/intltool/intltool-0.51.json
+  - name: gtkspell
+    sources:
+      - type: archive
+        url: https://downloads.sourceforge.net/gtkspell/gtkspell3-3.0.10.tar.xz
+        sha256: b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732
+  - python3-requirements.yaml
+  - name: formiko
+    buildsystem: simple
+    build-commands:
+      - python3 setup.py install --prefix=${FLATPAK_DEST} --root=/ --optimize=1
+    sources:
+      - type: git
+        url: https://github.com/ondratu/formiko.git
+        tag: 1.5.0
+        commit: 49a8cff128ae82ebc23918f2b44acfe8b703e260
