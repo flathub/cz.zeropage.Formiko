@@ -35,12 +35,24 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz
         sha256: 7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d
+        x-checker-data:
+              type: anitya
+              project-id: 319342
+              stable-only: true
+              url-template: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-$version.tar.xz
+
   - shared-modules/intltool/intltool-0.51.json
   - name: gtkspell
     sources:
       - type: archive
         url: https://downloads.sourceforge.net/gtkspell/gtkspell3-3.0.10.tar.xz
         sha256: b040f63836b347eb344f5542443dc254621805072f7141d49c067ecb5a375732
+        x-checker-data:
+          type: anitya
+          project-id: 13111
+          stable-only: true
+          url-template: https://downloads.sourceforge.net/gtkspell/gtkspell3-$version.tar.xz
+          
   - python3-requirements.yaml
   - name: formiko
     buildsystem: simple
