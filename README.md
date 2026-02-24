@@ -21,7 +21,3 @@ flatpak run cz.zeropage.Formiko
 git clone git@github.com:flathub/cz.zeropage.Formiko.git
 flatpak run org.flatpak.Builder build-dir --user --ccache --force-clean --install cz.zeropage.Formiko.json
 ```
-
----
-
-**Technologies**: GNOME, GTK3, GtkSource, Webkit2, Python
