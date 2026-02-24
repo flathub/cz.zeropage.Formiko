@@ -4,6 +4,7 @@ runtime-version: '48'
 sdk: org.gnome.Sdk
 command: formiko
 rename-icon: formiko
+copy-icon: true
 rename-desktop-file: formiko.desktop
 rename-appdata-file: formiko.metainfo.xml
 finish-args:
@@ -65,5 +66,3 @@ modules:
         commit: 49a8cff128ae82ebc23918f2b44acfe8b703e260
       - type: patch
         path: appdata.patch
-      - type: patch
-        path: icons.patch
