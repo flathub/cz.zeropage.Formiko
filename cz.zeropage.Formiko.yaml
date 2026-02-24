@@ -65,3 +65,5 @@ modules:
         commit: 49a8cff128ae82ebc23918f2b44acfe8b703e260
       - type: patch
         path: appdata.patch
+      - type: patch
+        path: icons.patch

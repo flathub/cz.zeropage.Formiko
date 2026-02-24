@@ -1,0 +1,26 @@
+diff --git a/formiko/dialogs.py b/formiko/dialogs.py
+index d0f6764..7cb53a1 100644
+--- a/formiko/dialogs.py
++++ b/formiko/dialogs.py
+@@ -31,7 +31,7 @@ class AboutDialog(Gtk.AboutDialog):
+         self.set_authors([__author__])
+         self.set_artists(["Petr Šimčík <petrsimi.org@gmail.com>"])
+         icon_theme = Gtk.IconTheme.get_default()
+-        self.set_logo(icon_theme.load_icon("formiko", 128, 0))
++        self.set_logo(icon_theme.load_icon("cz.zeropage.Formiko", 128, 0))
+ 
+ 
+ class QuitDialogWithoutSave(Gtk.MessageDialog):
+diff --git a/formiko/window.py b/formiko/window.py
+index 8266473..434c321 100644
+--- a/formiko/window.py
++++ b/formiko/window.py
+@@ -61,7 +61,7 @@ class AppWindow(Gtk.ApplicationWindow):
+         self.actions()
+         self.connect("delete-event", self.on_delete)
+         self.set_titlebar(self.create_headerbar())
+-        self.set_default_icon_name("formiko")
++        self.set_default_icon_name("cz.zeropage.Formiko")
+         self.layout(file_name)
+ 
+         self.__last_changes = 0
