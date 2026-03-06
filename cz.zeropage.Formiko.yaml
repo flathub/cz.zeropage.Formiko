@@ -38,5 +38,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/ondratu/formiko.git
-        branch: master
         commit: b1c3085fbc957c2a3911b99c25a0523ba3f64777
